@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+	<Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <GraphQL Remove="queries\GetCourses.graphql" />
+    <GraphQL Remove="queries\GetCoursesById.graphql" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Queries\TestQuery.graphql" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.1" />
+    <PackageReference Include="StrawberryShake.Server" Version="13.7.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <GraphQL Update="Queries\TestQuery.graphql">
+      <GraphQL>true</GraphQL>
+    </GraphQL>
+  </ItemGroup>
+
+</Project>

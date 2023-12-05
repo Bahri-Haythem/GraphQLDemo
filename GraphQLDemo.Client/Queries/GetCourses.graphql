@@ -1,0 +1,15 @@
+query GetCourses{
+  courses(first: 50) {
+    edges {
+      node {
+        id
+        name
+        creator{
+          id
+          username
+          photoUrl
+        }
+      }
+    }
+  }
+}
